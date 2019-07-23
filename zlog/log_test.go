@@ -18,7 +18,7 @@
  * @author Keith James <kdj@sanger.ac.uk>
  */
 
-package logshim_zerolog
+package zlog
 
 import (
 	"os"
