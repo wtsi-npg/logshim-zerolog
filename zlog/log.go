@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019. Genome Research Ltd. All rights reserved.
+ * Copyright (C) 2019, 2020. Genome Research Ltd. All rights reserved.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -109,6 +109,11 @@ func (msg *zeroMessage) Err(err error) logshim.Message {
 
 func (msg *zeroMessage) Bool(key string, val bool) logshim.Message {
 	msg.Event.Bool(key, val)
+	return msg
+}
+
+func (msg *zeroMessage) Dur(key string, val time.Duration) logshim.Message {
+	msg.Event.Dur(key, val)
 	return msg
 }
 
